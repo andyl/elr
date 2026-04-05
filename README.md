@@ -1,9 +1,10 @@
 # elr — Elixir Load & Run
 
-Quickly load and run Elixir scripts (`.exs`) and escripts from Hex packages,
-git repos, or direct URLs.  Just point `elr` at a reference and go.
+Load and run Elixir scripts (`.exs`) and escripts from Hex packages,
+git repos, or direct URLs.  
 
-Inspired by `npx`, built for Elixir's scripting strengths.
+Just point `elr` at a reference and go.  Inspired by `npx`, built for Elixir's
+scripting strengths.
 
 ## Features
 
