@@ -1,18 +1,12 @@
 defmodule Elr do
   @moduledoc """
-  Documentation for `Elr`.
+  Elixir Load & Run — the Elixir equivalent of `npx`.
+
+  Loads and runs Elixir scripts, escripts, and tools from Hex packages,
+  git repos, or URLs with automatic dependency fetching via `Mix.install/2`.
   """
 
-  @doc """
-  Hello world.
+  @version Mix.Project.config()[:version]
 
-  ## Examples
-
-      iex> Elr.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
+  def version, do: @version
 end

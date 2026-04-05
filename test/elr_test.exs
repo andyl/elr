@@ -1,8 +1,7 @@
 defmodule ElrTest do
   use ExUnit.Case
-  doctest Elr
 
-  test "greets the world" do
-    assert Elr.hello() == :world
+  test "version/0 returns the project version" do
+    assert Elr.version() == "0.1.0"
   end
 end

@@ -20,9 +20,19 @@ mix format --check-formatted  # Check formatting without changing files
 
 ## Architecture
 
-- **lib/elr.ex** — Main module (currently scaffolded, not yet implemented)
-- **_spec/designs/** — Design specifications; `260404_InitialDesign.md` contains the full product spec
-- **deps** — Includes `igniter` (dev/test only) for code generation and AST manipulation via `sourceror`
+Pipeline: **parse → resolve → cache check → load → detect entrypoint → execute**
+
+- **lib/elr.ex** — Main module, version info
+- **lib/elr/cli.ex** — Escript entrypoint, argument parsing, option handling
+- **lib/elr/ref.ex** — Reference string parsing into `%Elr.Ref{}` struct
+- **lib/elr/resolver.ex** — Converts parsed refs into `Mix.install` dep specs or download targets
+- **lib/elr/cache.ex** — Filesystem cache management (dir, lookup, store, delete, list, clean, prune)
+- **lib/elr/loader.ex** — Calls `Mix.install/2` or downloads scripts, uses cache
+- **lib/elr/runner.ex** — Entrypoint detection (escript config or `main/1`) and execution
+- **lib/elr/output.ex** — User-facing output with color/verbosity support
+- **lib/elr/http.ex** — HTTP client wrapper using Erlang's `:httpc`
+- **_spec/designs/** — Design specifications
+- **_spec/plans/** — Implementation plans
 
 ## Key Design Decisions (from spec)
 
