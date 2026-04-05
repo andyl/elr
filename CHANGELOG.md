@@ -5,6 +5,15 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## v0.0.3 (2026-04-05)
+
+
+
+
+### Bug Fixes:
+
+* render help message if no CL args by andyl
+
 ## v0.0.2 (2026-04-05)
 
 
