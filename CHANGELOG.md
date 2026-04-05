@@ -5,6 +5,15 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## v0.0.2 (2026-04-05)
+
+
+
+
+### Bug Fixes:
+
+* add logos for documentation by andyl
+
 ## v0.0.1 (2026-04-05)
 
 
