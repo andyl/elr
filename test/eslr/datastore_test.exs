@@ -1,7 +1,7 @@
-defmodule Elr.DatastoreTest do
+defmodule Eslr.DatastoreTest do
   use ExUnit.Case
 
-  alias Elr.Datastore
+  alias Eslr.Datastore
 
   setup do
     tmp_dir = Path.join(System.tmp_dir!(), "elr_ds_test_#{:rand.uniform(100_000)}")

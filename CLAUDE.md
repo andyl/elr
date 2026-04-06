@@ -24,7 +24,7 @@ Pipeline: **parse → resolve → cache check → load → detect entrypoint →
 
 - **lib/elr.ex** — Main module, version info
 - **lib/elr/cli.ex** — Escript entrypoint, argument parsing, option handling
-- **lib/elr/ref.ex** — Reference string parsing into `%Elr.Ref{}` struct
+- **lib/elr/ref.ex** — Reference string parsing into `%Eslr.Ref{}` struct
 - **lib/elr/resolver.ex** — Converts parsed refs into `Mix.install` dep specs or download targets
 - **lib/elr/cache.ex** — Filesystem cache management (dir, lookup, store, delete, list, clean, prune)
 - **lib/elr/loader.ex** — Calls `Mix.install/2` or downloads scripts, uses cache

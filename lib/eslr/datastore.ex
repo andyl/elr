@@ -1,10 +1,10 @@
-defmodule Elr.Datastore do
+defmodule Eslr.Datastore do
   @moduledoc """
   YAML-based cache datastore tracking per-script usage stats.
   Stored at `Cache.dir()/.script_directory.yml`.
   """
 
-  alias Elr.Cache
+  alias Eslr.Cache
 
   @filename ".script_directory.yml"
 

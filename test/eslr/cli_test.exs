@@ -1,11 +1,11 @@
-defmodule Elr.CLITest do
+defmodule Eslr.CLITest do
   use ExUnit.Case
 
   import ExUnit.CaptureIO
 
   describe "--help" do
     test "prints help text" do
-      output = capture_io(fn -> Elr.CLI.main(["--help"]) end)
+      output = capture_io(fn -> Eslr.CLI.main(["--help"]) end)
       assert output =~ "elr — Elixir Load & Run"
       assert output =~ "Usage:"
       assert output =~ "--verbose"
@@ -15,14 +15,14 @@ defmodule Elr.CLITest do
 
   describe "--version" do
     test "prints version" do
-      output = capture_io(fn -> Elr.CLI.main(["--version"]) end)
-      assert output =~ "elr #{Elr.version()}"
+      output = capture_io(fn -> Eslr.CLI.main(["--version"]) end)
+      assert output =~ "elr #{Eslr.version()}"
     end
   end
 
   describe "--cache dir" do
     test "prints cache directory path" do
-      output = capture_io(fn -> Elr.CLI.main(["--cache", "dir"]) end)
+      output = capture_io(fn -> Eslr.CLI.main(["--cache", "dir"]) end)
       assert String.trim(output) != ""
     end
   end
@@ -36,7 +36,7 @@ defmodule Elr.CLITest do
       IO.puts("hello from elr")
       """)
 
-      output = capture_io(fn -> Elr.CLI.main([tmp]) end)
+      output = capture_io(fn -> Eslr.CLI.main([tmp]) end)
       assert output =~ "hello from elr"
 
       File.rm!(tmp)
@@ -52,14 +52,14 @@ defmodule Elr.CLITest do
       IO.puts(Enum.join(System.argv(), ","))
       """)
 
-      output = capture_io(fn -> Elr.CLI.main(["--", tmp, "--help", "foo"]) end)
+      output = capture_io(fn -> Eslr.CLI.main(["--", tmp, "--help", "foo"]) end)
       assert output =~ "--help,foo"
 
       File.rm!(tmp)
     end
 
     test "elr options before -- are consumed by elr" do
-      output = capture_io(fn -> Elr.CLI.main(["--help", "--", "somescript.exs"]) end)
+      output = capture_io(fn -> Eslr.CLI.main(["--help", "--", "somescript.exs"]) end)
       assert output =~ "elr — Elixir Load & Run"
     end
   end
@@ -69,7 +69,7 @@ defmodule Elr.CLITest do
       output =
         capture_io(:stderr, fn ->
           try do
-            Elr.CLI.main(["Invalid-Package!"])
+            Eslr.CLI.main(["Invalid-Package!"])
           catch
             :exit, _ -> :ok
           end
@@ -82,7 +82,7 @@ defmodule Elr.CLITest do
       output =
         capture_io(:stderr, fn ->
           try do
-            Elr.CLI.main(["jason"])
+            Eslr.CLI.main(["jason"])
           catch
             :exit, _ -> :ok
           end
@@ -94,7 +94,7 @@ defmodule Elr.CLITest do
 
   describe "no arguments" do
     test "prints help when no args given" do
-      output = capture_io(fn -> Elr.CLI.main([]) end)
+      output = capture_io(fn -> Eslr.CLI.main([]) end)
       assert output =~ "elr — Elixir Load & Run"
     end
   end

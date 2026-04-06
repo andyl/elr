@@ -1,9 +1,9 @@
-defmodule Elr.Resolver do
+defmodule Eslr.Resolver do
   @moduledoc """
   Converts parsed refs into actionable targets: clone URLs, download URLs, or local paths.
   """
 
-  alias Elr.Ref
+  alias Eslr.Ref
 
   @spec resolve(Ref.t()) ::
           {:clone, String.t(), String.t() | nil}

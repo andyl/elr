@@ -1,7 +1,7 @@
-defmodule Elr.CacheTest do
+defmodule Eslr.CacheTest do
   use ExUnit.Case, async: true
 
-  alias Elr.{Cache, Ref}
+  alias Eslr.{Cache, Ref}
 
   setup do
     tmp_dir = Path.join(System.tmp_dir!(), "elr_cache_test_#{:rand.uniform(100_000)}")

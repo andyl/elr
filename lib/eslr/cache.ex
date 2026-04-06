@@ -1,4 +1,4 @@
-defmodule Elr.Cache do
+defmodule Eslr.Cache do
   @moduledoc """
   Filesystem caching keyed by reference + Elixir/OTP version.
   """
@@ -13,7 +13,7 @@ defmodule Elr.Cache do
     end
   end
 
-  def cache_key(%Elr.Ref{} = ref) do
+  def cache_key(%Eslr.Ref{} = ref) do
     elixir_version = System.version()
     otp_release = :erlang.system_info(:otp_release) |> to_string()
 

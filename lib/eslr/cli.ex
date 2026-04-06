@@ -1,9 +1,9 @@
-defmodule Elr.CLI do
+defmodule Eslr.CLI do
   @moduledoc """
   Escript entrypoint. Parses arguments and orchestrates the pipeline.
   """
 
-  alias Elr.{Cache, Datastore, Loader, Output, Ref, Script}
+  alias Eslr.{Cache, Datastore, Loader, Output, Ref, Script}
 
   @switches [
     help: :boolean,
@@ -32,7 +32,7 @@ defmodule Elr.CLI do
         print_help()
 
       opts[:version] ->
-        IO.puts("elr #{Elr.version()}")
+        IO.puts("elr #{Eslr.version()}")
 
       opts[:cache] ->
         handle_cache(opts[:cache])
@@ -72,7 +72,7 @@ defmodule Elr.CLI do
       cache_key = Cache.cache_key(ref)
       Datastore.record_run(cache_key)
 
-      case Elr.Runner.run(result, ref, argv) do
+      case Eslr.Runner.run(result, ref, argv) do
         :ok ->
           :ok
 
@@ -94,7 +94,7 @@ defmodule Elr.CLI do
 
   defp handle_find(ref_string, opts) do
     with {:ok, ref} <- Ref.parse(ref_string) do
-      case Elr.Resolver.resolve(ref) do
+      case Eslr.Resolver.resolve(ref) do
         {:clone, url, git_ref} ->
           find_scripts_in_repo(url, git_ref, opts)
 

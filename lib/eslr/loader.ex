@@ -1,9 +1,9 @@
-defmodule Elr.Loader do
+defmodule Eslr.Loader do
   @moduledoc """
   Clones repos, downloads scripts, and locates valid scripts. Uses cache when available.
   """
 
-  alias Elr.{Cache, Datastore, Http, Output, Ref, Resolver, Script}
+  alias Eslr.{Cache, Datastore, Http, Output, Ref, Resolver, Script}
 
   @spec load(Ref.t(), keyword()) :: {:ok, {:script, String.t()}} | {:error, String.t()}
   def load(%Ref{} = ref, opts \\ []) do

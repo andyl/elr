@@ -1,7 +1,7 @@
-defmodule Elr.RefTest do
+defmodule Eslr.RefTest do
   use ExUnit.Case, async: true
 
-  alias Elr.Ref
+  alias Eslr.Ref
 
   describe "local files" do
     test "relative path with ./" do

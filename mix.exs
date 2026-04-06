@@ -1,16 +1,16 @@
-defmodule Elr.MixProject do
+defmodule Eslr.MixProject do
   use Mix.Project
 
   @version "0.0.6"
 
   def project do
     [
-      app: :elr,
+      app: :eslr,
       version: @version,
       elixir: "~> 1.19",
       start_permanent: Mix.env() == :prod,
-      description: "Elixir Load & Run",
-      escript: [main_module: Elr.CLI],
+      description: "Elixir Script Load & Run",
+      escript: [main_module: Eslr.CLI],
       usage_rules: usage_rules(),
       package: package(),
       docs: docs(),
