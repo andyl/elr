@@ -5,6 +5,17 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## v0.0.7 (2026-04-06)
+
+
+
+
+### Bug Fixes:
+
+* update cli help by andyl
+
+* rename elr to eslr by andyl
+
 ## v0.0.6 (2026-04-06)
 
 
