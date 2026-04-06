@@ -5,6 +5,15 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## v0.0.8 (2026-04-06)
+
+
+
+
+### Bug Fixes:
+
+* cleanup cli commands by andyl
+
 ## v0.0.7 (2026-04-06)
 
 
