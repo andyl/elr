@@ -245,7 +245,7 @@ defmodule Scriptlr.CLI do
 
   defp print_help do
     IO.puts("""
-    scriptlr — Elixir Script Load & Run
+    scriptlr — Elixir Script Manager
 
     Usage:
       scriptlr [options] [--] <reference> [args...]

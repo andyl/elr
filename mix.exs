@@ -9,7 +9,7 @@ defmodule Scriptlr.MixProject do
       version: @version,
       elixir: "~> 1.19",
       start_permanent: Mix.env() == :prod,
-      description: "Elixir Script Load & Run",
+      description: "Elixir Script Manager",
       escript: [main_module: Scriptlr.CLI],
       usage_rules: usage_rules(),
       package: package(),

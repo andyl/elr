@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**scriptlr** (Elixir Script Load & Run) is a CLI tool — the Elixir equivalent of `npx`. It loads and runs Elixir scripts (`.exs` files containing `Mix.install`) from git repos or URLs with automatic dependency fetching. Distributed as an escript.
+**scriptlr** (Elixir Script Manager) is a CLI tool — the Elixir equivalent of `npx`. It loads and runs Elixir scripts (`.exs` files containing `Mix.install`) from git repos or URLs with automatic dependency fetching. Distributed as an escript.
 
 ## Build & Development Commands
 

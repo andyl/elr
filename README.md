@@ -1,4 +1,4 @@
-# scriptlr — Elixir Script Load & Run
+# scriptlr — Elixir Script Manager
 
 Load and run Elixir scripts (`.exs`) from git repos or direct URLs.  
 

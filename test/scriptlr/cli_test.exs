@@ -19,7 +19,7 @@ defmodule Scriptlr.CLITest do
   describe "--help" do
     test "prints help text" do
       output = capture_io(fn -> Scriptlr.CLI.main(["--help"]) end)
-      assert output =~ "scriptlr — Elixir Script Load & Run"
+      assert output =~ "scriptlr — Elixir Script Manager"
       assert output =~ "Usage:"
       assert output =~ "--verbose"
       assert output =~ "--find"
@@ -73,7 +73,7 @@ defmodule Scriptlr.CLITest do
 
     test "elr options before -- are consumed by elr" do
       output = capture_io(fn -> Scriptlr.CLI.main(["--help", "--", "somescript.exs"]) end)
-      assert output =~ "scriptlr — Elixir Script Load & Run"
+      assert output =~ "scriptlr — Elixir Script Manager"
     end
   end
 
@@ -108,7 +108,7 @@ defmodule Scriptlr.CLITest do
   describe "no arguments" do
     test "prints help when no args given" do
       output = capture_io(fn -> Scriptlr.CLI.main([]) end)
-      assert output =~ "scriptlr — Elixir Script Load & Run"
+      assert output =~ "scriptlr — Elixir Script Manager"
     end
   end
 end
